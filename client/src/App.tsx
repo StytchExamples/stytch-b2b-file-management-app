@@ -1,5 +1,3 @@
-
-
 import { Route, Routes } from "react-router-dom"
 import { ContextProvider } from "./context/ContextProvider";
 import { Authenticate, Home, LoginOrSignup, NotFound, Register } from "./pages";
