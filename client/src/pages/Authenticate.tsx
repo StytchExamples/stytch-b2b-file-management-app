@@ -39,7 +39,7 @@ export const Authenticate = () => {
                                 if(result.isNewUser){
                                     navigate("/register")
                                 }else {
-                                    navigate("/")
+                                    navigate("/home")
                                 }
                             }).catch(error => {
                                 console.error(error);

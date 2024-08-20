@@ -1,4 +1,4 @@
- import {useStytchMemberSession} from '@stytch/react/b2b'
+import {useStytchMemberSession} from '@stytch/react/b2b'
 import { useEffect } from 'react';
 import { Navigate, Outlet, useNavigate } from 'react-router-dom';
 
@@ -13,5 +13,5 @@ export const ProtectedRoutes = () => {
       }
     }, [fromCache, session, navigate]);
   
-    return session ? <Outlet /> : <Navigate to="/login" />;
+    return session ? <Outlet /> : <Navigate to="/signup" />;
 }

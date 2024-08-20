@@ -65,7 +65,7 @@ export const Modal: React.FC = () => {
                         </button>
                         <button
                             type="submit"
-                            className="px-4 py-2 bg-[#0061FF] text-white rounded hover:bg-blue-700 transition duration-300 ease-in-out"
+                            className="px-4 py-2 bg-[#19303d] text-white rounded hover:bg-[#0fe5c0] transition duration-300 ease-in-out"
                         >
                             Create
                         </button>

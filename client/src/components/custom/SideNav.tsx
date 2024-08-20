@@ -10,11 +10,11 @@ export const SideNav = () => {
     <div className="fixed border-r-2 h-full w-64 bg-white shadow-xl">
       <div className="py-4 px-8 h-full flex flex-col justify-between">
         <div>
-          <h2 className="text-xl font-bold mb-4">Menu</h2>
+          <h2 className="text-xl font-bold mb-4 text-[#19303d]">Menu</h2>
           <ul className="space-y-2">
             <li>
               <Link to="/" className="flex items-center p-2 hover:bg-gray-100 rounded">
-                <FaHome className="mr-2 text-[#0061FF]" />
+                <FaHome className="mr-2 text-[#19303d]" />
                 Home
               </Link>
             </li>
@@ -40,10 +40,10 @@ export const SideNav = () => {
         </div>
         <button 
           onClick={openModal} 
-          className="flex items-center mt-auto px-6 py-2 bg-[#0061FF] text-white font-semibold rounded-md shadow-sm hover:bg-blue-700 transition duration-300 ease-in-out"
+          className="flex items-center mt-auto px-6 py-2 bg-[#19303d] text-white font-semibold rounded-md shadow-sm hover:bg-[#0fe5c0] transition duration-300 ease-in-out"
         >
           <FaPlus className="mr-2" />
-          New Folder
+          New folder
         </button>
       </div>
     </div>

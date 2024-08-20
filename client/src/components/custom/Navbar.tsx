@@ -17,7 +17,7 @@ export const Navbar = () => {
   return (
     <nav className="flex justify-between items-center h-20 py-2 px-8 bg-[#fcfcfc] shadow-lg">
       <div className="mr-6">
-        <h1 className="text-2xl font-bold text-[#051F61] mb-1">My Cloud</h1>
+        <h1 className="text-2xl font-bold text-[#19303d] mb-1">My Cloud</h1>
         <p className="text-xs text-[#757897] font-semibold capitalize">Welcome, {user?.name}👋</p>
       </div>
       <div className="flex-grow mx-4">
@@ -42,7 +42,7 @@ export const Navbar = () => {
             <RxAvatar className="text-2xl" />
         </div>
         <button 
-            className="px-3 py-2 bg-[#0061FF] text-white font-semibold rounded-md shadow-sm hover:bg-blue-700 transition duration-300 ease-in-out"
+            className="px-3 py-2 bg-[#19303d] text-white font-semibold rounded-md shadow-sm hover:bg-[#0fe5c0] transition duration-300 ease-in-out"
             onClick={logOut}
         >
           <MdLogout />

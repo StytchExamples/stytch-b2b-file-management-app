@@ -36,15 +36,15 @@ export const Home = () => {
               <FcOpenedFolder className='text-[7rem]'/>
             </div>
             <div className='text-center'>
-              <p className='text-[1rem] text-[#757897] font-normal leading-5'>Folders let you keep your docs organized in one place.</p>
-              <p className='text-[1rem] text-[#757897] font-normal'>All your folders will be listed here</p>
-              <div className='flex items-center justify-center gap-4 mt-5'>
+              <p className='text-[1rem] text-[#757897] font-medium leading-5'>Folders let you keep your docs organized in one place.</p>
+              <p className='text-[1rem] text-[#757897] font-medium'>All your folders will be listed here</p>
+              <div className='flex items-center gap-4 mt-5'>
                 <button className="flex items-center mt-auto px-6 py-2  text-[#757897] border font-semibold rounded-md shadow-sm transition duration-300 ease-in-out">
                   Sample folder
                 </button>
                 <button 
                   onClick={openModal} 
-                  className="flex items-center mt-auto px-6 py-2 bg-[#0061FF] text-white font-semibold rounded-md shadow-sm hover:bg-blue-700 transition duration-300 ease-in-out"
+                  className="flex items-center mt-auto px-6 py-2 bg-[#19303d] text-white font-semibold rounded-md shadow-sm hover:bg-[#0fe5c0] transition duration-300 ease-in-out"
                 >
                   Create a folder
                 </button>

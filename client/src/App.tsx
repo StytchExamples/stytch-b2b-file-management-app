@@ -1,12 +1,15 @@
 import { Route, Routes } from "react-router-dom"
 import { ContextProvider } from "./context/ContextProvider";
-import { Authenticate, Home, LoginOrSignup, NotFound, Register } from "./pages";
+import { Authenticate, Home, SignIn, NotFound, Register, SignUp } from "./pages";
 import { Layout, Modal, ProtectedRoutes } from "./components";
+import LandingPage from "./pages/LandingPage";
 
 // Route constants
 const ROUTES = {
-  HOME: '/',
-  LOGIN: '/login',
+  LANDINGPAGE: '/',
+  HOME: '/home',
+  LOGIN: '/signin',
+  SIGNUP: '/signup',
   AUTHENTICATE: '/authenticate',
   REGISTER: '/register'
 };
@@ -17,7 +20,9 @@ function App() {
     <ContextProvider>
       <div className="relative">
         <Routes>
-          <Route path={ROUTES.LOGIN} element={<LoginOrSignup/>}/>
+          <Route path={ROUTES.LANDINGPAGE} element={<LandingPage/>}/>
+          <Route path={ROUTES.LOGIN} element={<SignIn/>}/>
+          <Route path={ROUTES.SIGNUP} element={<SignUp/>}/> 
           <Route path={ROUTES.AUTHENTICATE} element={<Authenticate/>}/>
           <Route element={<ProtectedRoutes/>}>
             <Route path={ROUTES.REGISTER} element={<Register/>}/>
