@@ -13,7 +13,7 @@ export const SideNav = () => {
           <h2 className="text-xl font-bold mb-4 text-[#19303d]">Menu</h2>
           <ul className="space-y-2">
             <li>
-              <Link to="/" className="flex items-center p-2 hover:bg-gray-100 rounded">
+              <Link to="/dashboard" className="flex items-center p-2 hover:bg-gray-100 rounded">
                 <FaHome className="mr-2 text-[#19303d]" />
                 Home
               </Link>

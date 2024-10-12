@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom"
 import { ContextProvider } from "./context/ContextProvider";
-import { Authenticate, Home, SignIn, CompleteRegistration, SignUp } from "./pages";
+import { Authenticate, Dashboard, SignIn, CompleteRegistration, SignUp } from "./pages";
 import { Layout, Modal, ProtectedRoutes } from "./components";
 import LandingPage from "./pages/LandingPage";
 
 const ROUTES = {
   LANDINGPAGE: '/',
-  HOME: '/home',
+  DASHBOARD: '/dashboard',
   LOGIN: '/signin',
   SIGNUP: '/signup',
   AUTHENTICATE: '/authenticate',
@@ -26,7 +26,7 @@ function App() {
           <Route element={<ProtectedRoutes/>}>
             <Route path={ROUTES.COMPLETE_REGISTRATION} element={<CompleteRegistration/>}/>
             <Route element={<Layout/>}>
-              <Route path={ROUTES.HOME} element={<Home/>}/>
+              <Route path={ROUTES.DASHBOARD} element={<Dashboard/>}/>
             </Route>
           </Route>
         </Routes>

@@ -31,7 +31,7 @@ export const CompleteRegistration = () => {
       }
       const result = await response.json();
       updateUser(result.user);
-      navigate("/home")
+      navigate("/dashboard")
     } catch (error) {
       console.error((error as Error).message);
     }

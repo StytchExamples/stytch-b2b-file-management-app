@@ -3,7 +3,7 @@ import { useAppContext } from '../context/ContextProvider';
 import { FcOpenedFolder } from "react-icons/fc";
 import { FolderCard, Spinner } from '../components';
 
-export const Home = () => {
+export const Dashboard = () => {
   const { folders, updateFolders, openModal } = useAppContext();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
