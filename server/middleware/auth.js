@@ -1,7 +1,5 @@
 const passport = require('passport')
 
-//middleware using passport
-
 const authenticate = (req, res, next) => {
     passport.authenticate('stytch', { session: false }, (err, user, info) => {
         if (err) {

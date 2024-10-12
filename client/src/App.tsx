@@ -1,17 +1,16 @@
 import { Route, Routes } from "react-router-dom"
 import { ContextProvider } from "./context/ContextProvider";
-import { Authenticate, Home, SignIn, NotFound, Register, SignUp } from "./pages";
+import { Authenticate, Home, SignIn, CompleteRegistration, SignUp } from "./pages";
 import { Layout, Modal, ProtectedRoutes } from "./components";
 import LandingPage from "./pages/LandingPage";
 
-// Route constants
 const ROUTES = {
   LANDINGPAGE: '/',
   HOME: '/home',
   LOGIN: '/signin',
   SIGNUP: '/signup',
   AUTHENTICATE: '/authenticate',
-  REGISTER: '/register'
+  COMPLETE_REGISTRATION: '/complete-registration'
 };
 
 function App() {
@@ -25,12 +24,11 @@ function App() {
           <Route path={ROUTES.SIGNUP} element={<SignUp/>}/> 
           <Route path={ROUTES.AUTHENTICATE} element={<Authenticate/>}/>
           <Route element={<ProtectedRoutes/>}>
-            <Route path={ROUTES.REGISTER} element={<Register/>}/>
+            <Route path={ROUTES.COMPLETE_REGISTRATION} element={<CompleteRegistration/>}/>
             <Route element={<Layout/>}>
               <Route path={ROUTES.HOME} element={<Home/>}/>
             </Route>
           </Route>
-          <Route path="*" element={<NotFound />} />
         </Routes>
         <Modal/>
       </div>

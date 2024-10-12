@@ -1,6 +1,6 @@
-import {useStytchMemberSession} from '@stytch/react/b2b'
+import { useStytchMemberSession } from '@stytch/react/b2b';
 import { useEffect } from 'react';
-import { Navigate, Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 export const ProtectedRoutes = () => {
     const { session, fromCache } = useStytchMemberSession();
@@ -9,9 +9,9 @@ export const ProtectedRoutes = () => {
     useEffect(() => {
       if (!session && !fromCache) {
         console.log("No session found, redirecting...");
-        <Navigate to="/" />;
+        navigate("/"); 
       }
     }, [fromCache, session, navigate]);
   
-    return session ? <Outlet /> : <Navigate to="/signup" />;
-}
+    return session ? <Outlet /> : null;
+};

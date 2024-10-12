@@ -38,7 +38,7 @@ export const SignUp = () => {
         </AuthNavbar>
         <div className="flex items-center justify-center h-screen">
             <div>
-              <h2 className="text-center text-3xl font-bold text-[#19303d] mb-6">Sign Up</h2>
+              <h2 className="text-center text-3xl font-bold text-[#19303d] mb-6">Sign up with a magic link</h2>
               <StytchB2B config={config} styles={style} />
             </div>
         </div>

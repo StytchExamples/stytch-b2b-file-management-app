@@ -34,12 +34,18 @@ const getFolder = async (req, res) => {
 const getAllFolders = async (req, res) => {
     try {
         const { member } = req.user
-        const folders = await fetchFolders(member?.member_id)
+        if (!member || !member.member_id) {
+            return res.status(401).json({
+                error: 'Invalid or expired session',
+                message: 'User information is missing or invalid'
+            })
+        }
+        const folders = await fetchFolders(member.member_id)
         res.status(200).json({ folders })
     } catch (error) {
         res.status(error.status_code || 500).json({
-            error: error.error_type || 'Invalid or expired session or orgId',
-            message: error.message || 'An error occurred while adding member',
+            error: error.error_type || 'Server error',
+            message: error.message || 'An error occurred while fetching folders',
         })
     }
 }

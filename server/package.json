@@ -15,7 +15,6 @@
     "license": "ISC",
     "description": "",
     "dependencies": {
-        "@prisma/client": "^5.18.0",
         "@tailwindcss/forms": "^0.5.7",
         "body-parser": "^1.20.2",
         "cookie-parser": "^1.4.6",
@@ -25,13 +24,13 @@
         "nodemon": "^3.1.4",
         "passport": "^0.7.0",
         "react-hook-form": "^7.52.2",
-        "stytch": "^11.1.0"
+        "stytch": "^11.1.0",
+        "uuid": "^10.0.0"
     },
     "devDependencies": {
         "eslint": "^9.8.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-prettier": "^5.2.1",
-        "prettier": "^3.3.3",
-        "prisma": "^5.18.0"
+        "prettier": "^3.3.3"
     }
 }

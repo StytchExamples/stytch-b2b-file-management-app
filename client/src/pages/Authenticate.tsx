@@ -37,7 +37,7 @@ export const Authenticate = () => {
                                 res.json()
                             )).then(result => {
                                 if(result.isNewUser){
-                                    navigate("/register")
+                                    navigate("/complete-registration")
                                 }else {
                                     navigate("/home")
                                 }

@@ -1,50 +1,38 @@
-const { PrismaClient } = require('@prisma/client')
-const prisma = new PrismaClient()
+const db = require('../utils/memory');
+const { v4: uuidv4 } = require('uuid');
 
 const createFolder = async (name, member_id) => {
     try {
-        const folder = await prisma.folder.create({
-            data: {
-                name,
-                creator: { connect: { id: member_id } },
-            },
-        })
-        return folder
+        const folder = {
+            id: uuidv4(),
+            name,
+            creatorId: member_id,
+        };
+        return db.createFolder(folder);
     } catch (error) {
-        throw new Error('Could not create folder', error.message)
-    } finally {
-        await prisma.$disconnect()
+        throw new Error(`Could not create folder: ${error.message}`);
     }
-}
+};
 
 const fetchFolder = async (folder_id) => {
     try {
-        const folder = await prisma.folder.findUnique({
-            where: { id: folder_id },
-        })
-        return folder
+        return db.getFolder(folder_id);
     } catch (error) {
-        throw new Error('Could not get folder', error.message)
-    } finally {
-        await prisma.$disconnect()
+        throw new Error(`Could not get folder: ${error.message}`);
     }
-}
+};
 
 const fetchFolders = async (member_id) => {
     try {
-        const folders = await prisma.folder.findMany({
-            where: { creatorId: member_id },
-        })
-        return folders
+        const folders = db.getFolders(member_id);
+        return folders;
     } catch (error) {
-        throw new Error('Could not fetch folder', error.message)
-    } finally {
-        await prisma.$disconnect()
+        throw new Error(`Could not fetch folders: ${error.message}`);
     }
-}
+};
 
 module.exports = {
     createFolder,
     fetchFolder,
     fetchFolders,
-}
+};
