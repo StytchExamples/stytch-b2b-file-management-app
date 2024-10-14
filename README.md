@@ -4,7 +4,7 @@ This example app is a B2B file management SaaS that allows users to create accou
 
 Users only need to provide their email address to receive a time-sensitive magic link, which grants them access to their accounts. After clicking the link sent to their email, our app will communicate with Stytch to validate the embedded magic link token, ensuring the user is legitimate before granting access.
 
-![Authentication flow diagram](https://github.com/StytchExamples/stytch-b2b-file-management-app/blob/main/client/public/App_Architecture.png)
+![Authentication flow diagram](https://github.com/StytchExamples/stytch-b2b-passwordless-authentication-example-app/blob/main/client/public/App_Architecture.png)
 
 On the client, we use Stytch’s B2B React SDK to implement our entire email magic link authentication flow. Then, we use Passport.js and Stytch’s Node.js SDK to handle token authentication and protect our server-side routes.
 
