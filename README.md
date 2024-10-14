@@ -2,7 +2,7 @@
 ## Overview
 This example app is a B2B file management SaaS that allows users to create accounts and sign in without passwords.
 
-These users only need to provide their email address to receive a time-sensitive magic link, which grants them access to their accounts. After clicking the link sent to their email, our app will communicate with Stytch to validate the embedded magic link token, ensuring the user is legitimate before granting access.
+Users only need to provide their email address to receive a time-sensitive magic link, which grants them access to their accounts. After clicking the link sent to their email, our app will communicate with Stytch to validate the embedded magic link token, ensuring the user is legitimate before granting access.
 
 ![Authentication flow diagram](https://github.com/StytchExamples/stytch-b2b-file-management-app/blob/main/client/public/App_Architecture.png)
 
